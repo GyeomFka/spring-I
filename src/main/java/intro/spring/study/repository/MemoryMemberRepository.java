@@ -1,9 +1,11 @@
 package intro.spring.study.repository;
 
 import intro.spring.study.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>(); // 동시성 이슈로 인해 공유변수일때는 ㅋㅋㄾ hash map을 써야한다/
