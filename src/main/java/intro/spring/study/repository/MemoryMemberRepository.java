@@ -8,8 +8,8 @@ import java.util.*;
 @Repository
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>(); // 동시성 이슈로 인해 공유변수일때는 ㅋㅋㄾ hash map을 써야한다/
-    private static long sequence = 0L; //long 어텀롱? 단순하게 구현
+    private static Map<Long, Member> store = new HashMap<>();
+    private static long sequence = 0L;
 
     @Override
     public Member save(Member member) {
