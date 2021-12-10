@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        table { border-collapse : collapse; width : 100%; }
+        th, td { border: solid 1px #000; }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="member : ${member}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div> <!--container-->
+</body>
+</html>
